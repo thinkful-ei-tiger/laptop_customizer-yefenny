@@ -17,6 +17,7 @@ class CustomizeList extends Component {
           options={FEATURES[feature]}
           state={state}
           selectedFeature={state.selected[feature].name}
+          updateFeature={updateFeature}
         />
       );
     });
