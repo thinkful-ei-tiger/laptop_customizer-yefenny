@@ -12,7 +12,6 @@ class CustomizeList extends Component {
       return (
         <Feature
           key={featureHash}
-          featureHash={featureHash}
           feature={feature}
           options={FEATURES[feature]}
           state={state}

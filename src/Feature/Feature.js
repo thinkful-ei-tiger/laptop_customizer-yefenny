@@ -8,13 +8,7 @@ import slugify from 'slugify';
 
 class Feature extends Component {
   render() {
-    const {
-      featureHash,
-      feature,
-      options,
-      updateFeature,
-      selectedFeature
-    } = this.props;
+    const { feature, options, updateFeature, selectedFeature } = this.props;
     const featureOptions = options.map((item) => {
       const itemHash = slugify(JSON.stringify(item));
       return (
@@ -29,7 +23,7 @@ class Feature extends Component {
       );
     });
     return (
-      <fieldset className='feature' key={featureHash}>
+      <fieldset className='feature'>
         <legend className='feature__name'>
           <h3>{feature}</h3>
         </legend>
