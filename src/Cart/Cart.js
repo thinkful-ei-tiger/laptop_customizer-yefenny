@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CartItem from '../CartItem/CartItem';
 import './Cart.css';
 
 // This object will allow us to
@@ -13,13 +14,11 @@ class Cart extends Component {
       const selectedOption = selected[feature];
 
       return (
-        <div className='summary__option' key={featureHash}>
-          <div className='summary__option__label'>{feature} </div>
-          <div className='summary__option__value'>{selectedOption.name}</div>
-          <div className='summary__option__cost'>
-            {USCurrencyFormat.format(selectedOption.cost)}
-          </div>
-        </div>
+        <CartItem
+          key={featureHash}
+          feature={feature}
+          selectedOption={selectedOption}
+        />
       );
     });
 
